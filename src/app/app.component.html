@@ -1,14 +1,22 @@
-<h1>Proyecto de Angular</h1>
-<ul>
-    <li><a [routerLink]="['/sobre-mi']">Sobre mi</a></li>
-    <li>
-        <a [routerLink]="['/proyectos']">Projectos</a>
-    </li>
-    <li>
-        <a [routerLink]="['/crear-proyecto']">Crear Proyecto</a>
-    </li>
-    <li>
-        <a [routerLink]="['/contacto']">Contacto</a>
-    </li>
-</ul>
-<router-outlet></router-outlet>
+<header>
+    <ul>
+        <li><a [routerLinkActive]="['actived']" [routerLink]="['/sobre-mi']">Sobre mi</a></li>
+        <li>
+            <a [routerLinkActive]="['actived']" [routerLink]="['/proyectos']">Projectos</a>
+        </li>
+        <li id="logo"><a href="#">JJ</a></li>
+        <li>
+            <a [routerLinkActive]="['actived']" [routerLink]="['/crear-proyecto']">Crear Proyecto</a>
+        </li>
+        <li>
+            <a [routerLinkActive]="['actived']" [routerLink]="['/contacto']">Contacto</a>
+        </li>
+    </ul>
+</header>
+<section id="content">
+    <router-outlet></router-outlet>
+</section>
+
+<footer>
+    Master en JavaScript
+</footer>

@@ -21,5 +21,222 @@
 body {
     font-family: 'yanone', Arial, Helvetica, sans-serif;
     font-size: 20px;
-    background-color: lightgray
+    background-color: lightgray;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+/*Header*/
+
+header {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(53, 103, 164, 0.8);
+    position: fixed;
+    text-transform: uppercase
+}
+
+header ul {
+    display: block;
+    width: 50%;
+    max-width: 550px;
+    height: inherit;
+    margin: 0 auto;
+    margin-top: -3px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 88px;
+}
+
+header a {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    line-height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all .3s ease-out;
+}
+
+header a:hover,
+.actived {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*Logotipo*/
+
+#logo {
+    font-family: 'finger', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#logo a {
+    transition: color .5s, transform .5s;
+}
+
+#logo a:hover {
+    color: black;
+    background-color: transparent;
+    transform: scale(1.5, 1.5);
+}
+
+
+/*Contenedor*/
+
+#content {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 0 40px black;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-height: calc(100vh - 150px);
+    padding-top: 125px;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+}
+
+
+/*Footer*/
+
+footer {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px 0;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center
+}
+
+
+/**/
+
+#title {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+#title h1 {
+    font-family: 'finger', Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#title h2 {
+    font-size: 25px;
+    color: gray;
+    margin: 5px 0;
+}
+
+article.about {
+    width: 70%;
+    font-size: 23px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    padding-bottom: 25px;
+    text-align: justify;
+    color: gray;
+    line-height: 1.2em;
+}
+
+
+/*Seccion con Formulario*/
+
+.container {
+    padding: 20px 50px;
+}
+
+.container h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+form {
+    width: 50%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 80%;
+    padding: 5px;
+}
+
+form button,
+form input[type="submit"] {
+    font-size: 17px;
+    display: block;
+    padding: 5px;
+    margin-top: 15px;
+    color: white;
+    background-color: rgba(53, 103, 164, 1);
+    border: 1px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+    transition: all .3s ease-out
+}
+
+form input[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+form input[disabled]:hover {
+    opacity: 0.5;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    border: 1px solid rgba(53, 103, 164, 1);
+    background-color: rgba(13, 67, 133, 1);
+}
+
+form .form-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+}
+
+.message {
+    width: 50%;
+    padding: 5px;
+}
+
+.success {
+    color: green;
+}
+
+.failed {
+    color: red;
 }
