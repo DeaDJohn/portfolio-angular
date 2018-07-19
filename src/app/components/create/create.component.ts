@@ -12,7 +12,7 @@ import { ProjectService } from "../../services/project.service";
 export class CreateComponent implements OnInit {
   public title: string;
   public project: Projects;
-  public status: boolean;
+  public status: string;
   constructor(
     private _projectService: ProjectService
   ) {
