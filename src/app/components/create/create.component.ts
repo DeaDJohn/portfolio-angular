@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Projects } from '../../models/projects';
 import { ProjectService } from "../../services/project.service";
 import { UploadService } from '../../services/upload.service';
-import { Global } from "../../services/global";
+import { Global } from '../../services/global';
 
 
 @Component({
@@ -17,11 +17,12 @@ export class CreateComponent implements OnInit {
 	public status: string;
 	public filesToUpload: Array<File>;
 	public saveProject;
-
+	public url: string;
 	constructor(
 		private _projectService: ProjectService,
 		private _uploadService: UploadService
 	) {
+		this.url = Global.url;
 		this.title = "Crear Proyecto";
 		this.project = new Projects("", "", "", "", 2019, "", "");
 	}
@@ -37,13 +38,19 @@ export class CreateComponent implements OnInit {
 					
 
 					// Subir la imagen
-					this._uploadService.makeFileRequest(Global.url + "upload-image/" + response.project._id, [], this.filesToUpload, 'image')
-						.then((result:any)=>{
-							console.log(result);
-							this.saveProject = result.project;
-							this.status = "success";
-							form.reset();
-						});
+					if (this.filesToUpload) {
+						this._uploadService.makeFileRequest(Global.url + "upload-image/" + response.project._id, [], this.filesToUpload, 'image')
+							.then((result:any)=>{
+								console.log(result);
+								this.saveProject = result.project;
+								this.status = "success";
+								form.reset();
+							});
+					}else{
+						this.saveProject = response.project;
+						this.status = "success";
+						form.reset();
+					}
 
 				} else {
 					this.status = "failed";
