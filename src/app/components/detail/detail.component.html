@@ -1,0 +1,15 @@
+<div class="detail">
+    <div class="no-image" *ngIf="!image_name">
+        <span>NO IMAGEN</span>
+    </div>
+    <div class="image" *ngIf="image_name">
+        <img src="{{url+'get-image/'+image_name}}" alt="">
+    </div>
+    <h1>{{project_name}} ({{project_year}})</h1>
+    <hr>
+    <h3 *ngIf="project_lang">
+        <strong>Lenguaje:  </strong>{{project_lang}}</h3>
+    <h4>
+        {{project_cat}}</h4>
+    <p>{{project_desc}}</p>
+</div>
