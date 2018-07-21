@@ -19,12 +19,15 @@ export class DetailComponent implements OnInit {
 	public image_name: string;
 	public project_lang: string;
 	public project_year: number;
+
+	public confirm: boolean;
   constructor(
     private _projectService: ProjectService,
     private _router: Router,
     private _route: ActivatedRoute
   ) {
 	this.url = Global.url;
+	  this.confirm = false;
   }
 
   ngOnInit() {
@@ -63,5 +66,8 @@ export class DetailComponent implements OnInit {
 			error => {
 				console.log(<any>error);
 			});
+	}
+	askDelete(param){
+		this.confirm = param;
 	}
 }
