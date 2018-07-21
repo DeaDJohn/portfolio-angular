@@ -38,7 +38,8 @@ header {
     height: 90px;
     background-color: rgba(53, 103, 164, 0.8);
     position: fixed;
-    text-transform: uppercase
+    text-transform: uppercase;
+    z-index: 99;
 }
 
 header ul {
@@ -240,4 +241,50 @@ form .form-error {
 
 .failed {
     color: red;
+}
+
+
+/* Página de proyectos */
+
+.projects {
+    margin: 0 -20px;
+}
+
+.project {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 30.2%;
+    text-align: center;
+    margin: 0 20px;
+    margin-bottom: 20px;
+}
+
+.project .image {
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.project .no-image {
+    height: 250px;
+    background-color: rgba(53, 103, 164, 1);
+    color: white;
+    font-family: 'finger', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.project .no-image span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project .project-info {
+    margin: 15px 0;
+    min-height: 45px;
+}
+
+.project img {
+    width: 100%;
 }
