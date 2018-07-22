@@ -1,3 +1,6 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 /*Importar fuentas custom*/
 
 @font-face {
@@ -370,4 +373,8 @@ strong {
 span.confirm {
     margin-bottom: 5px;
     display: block;
+}
+
+.mat-form-field {
+    width: 100%;
 }

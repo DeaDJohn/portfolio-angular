@@ -9,31 +9,66 @@
         El proyecto no se ha podido crear
     </div>
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
-        <p>
+        <!-- <p>
             <label for="name">Nombre</label>
             <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required/>
             <span class="form-error" *ngIf="name.touched && !name.valid">El nombre es obligartorio</span>
-        </p>
+        </p> -->
         <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+                <mat-error *ngIf="name.touched && !name.valid">El nombre es obligartorio</mat-error>
+            </mat-form-field>
+        </p>
+        <!-- <p>
             <label for="description">Descripción</label>
             <textarea type="text" name="description" #description="ngModel" [(ngModel)]="project.description" required>
             </textarea>
             <span class="form-error" *ngIf="description.touched && !description.valid">La descripción es obligartoria</span>
-        </p>
+        </p> -->
         <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input matInput placeholder="Descripción" name="description" #description="ngModel" [(ngModel)]="project.description" required>
+                <mat-error *ngIf="description.touched && !description.valid">La descripción es obligartoria</mat-error>
+            </mat-form-field>
+        </p>
+        <!-- <p>
             <label for="category">Categoría</label>
             <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/>
             <span class="form-error" *ngIf="category.touched && !category.valid">La categoría es obligartoria</span>
-        </p>
+        </p> -->
         <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Categoría</mat-label>
+                <input matInput placeholder="Categoría" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+                <mat-error *ngIf="category.touched && !category.valid">La categoría es obligartoria</mat-error>
+            </mat-form-field>
+        </p>
+        <!-- <p>
             <label for="year">Año</label>
             <input type="text" name="year" #year="ngModel" [(ngModel)]="project.year" required/>
             <span class="form-error" *ngIf="year.touched && !year.valid">El año es obligartorio</span>
-        </p>
+        </p> -->
         <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Año</mat-label>
+                <input matInput placeholder="Año" name="year" #year="ngModel" [(ngModel)]="project.year" required>
+                <mat-error *ngIf="year.touched && !year.valid">El año es obligartorio</mat-error>
+            </mat-form-field>
+        </p>
+        <!-- <p>
             <label for="langs">Lenguajes</label>
             <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
             <span class="form-error" *ngIf="langs.touched && !langs.valid">Los lenguajes son obligartorios</span>
+        </p> -->
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Lenguajes</mat-label>
+                <input matInput placeholder="Lenguajes" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+                <mat-error *ngIf="langs.touched && !langs.valid">Los lenguajes son obligartorios</mat-error>
+            </mat-form-field>
         </p>
         <p>
             <label for="image">Imagen del proyecto</label>

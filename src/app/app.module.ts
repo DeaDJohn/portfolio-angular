@@ -4,6 +4,9 @@ import { routing, appRoutingProvides } from "./app.routing";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from "./material";
+
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -24,7 +27,14 @@ import { EditComponent } from './components/edit/edit.component';
     DetailComponent,
     EditComponent
   ],
-  imports: [BrowserModule, routing, HttpClientModule,FormsModule],
+  imports: [
+    BrowserModule,
+    routing,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
+  ],
   providers: [appRoutingProvides],
   bootstrap: [AppComponent, appRoutingProvides]
 })
