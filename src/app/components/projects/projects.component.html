@@ -2,7 +2,7 @@
     <h2>Projectos</h2>
 
     <ul class="projects">
-        <li *ngFor="let project of projects" class="project">
+        <li *ngFor="let project of projects" class="project" [@flyInOut]="showProject">
             <a [routerLink]="[ project._id]">
                 <div class="image" *ngIf="project.image">
                     <img src="{{url+'get-image/'+project.image}}" alt="">
