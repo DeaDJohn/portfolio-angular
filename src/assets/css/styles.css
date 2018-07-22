@@ -292,6 +292,7 @@ form .form-error {
 .project .image {
     max-height: 250px;
     overflow: hidden;
+    height: 250px;
 }
 
 .project .no-image {
@@ -316,6 +317,10 @@ form .form-error {
 
 .project img {
     width: 100%;
+    width: auto;
+    display: block;
+    max-height: 100%;
+    margin: 0 auto;
 }
 
 
