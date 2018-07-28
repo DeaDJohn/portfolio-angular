@@ -1,21 +1,21 @@
 <div class="container">
     <h2>Projectos</h2>
 
-    <ul class="projects">
-        <li *ngFor="let project of projects" class="project" [@flyInOut]="showProject">
+    <div class="projects">
+        <mat-card *ngFor="let project of projects" class="project" [@flyInOut]="showProject">
             <a [routerLink]="[ project._id]">
                 <div class="image" *ngIf="project.image">
-                    <img src="{{url+'get-image/'+project.image}}" alt="">
+                    <img mat-card-image src="{{url+'get-image/'+project.image}}" alt="">
                 </div>
                 <div class="no-image" *ngIf="!project.image">
                     <span>NO IMAGEN</span>
                 </div>
-                <div class="project-info">
+                <mat-card-content class="project-info">
                     <h3>{{project.name}}</h3>
                     <p>{{project.langs}}</p>
-                </div>
+                </mat-card-content>
             </a>
-        </li>
+        </mat-card>
         <div class="clearfix"></div>
-    </ul>
+    </div>
 </div>
